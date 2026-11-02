@@ -1,0 +1,225 @@
+{
+  "category": {
+    "name": "Industrial software",
+    "name_fa": "نرم‌افزار صنعتی",
+    "slug": "industrial-software"
+  },
+  "product": {
+    "name": "Horizon SCADA",
+    "name_fa": "Horizon SCADA",
+    "slug": "horizon-scada",
+    "short_description": "A connected view of your sites, equipment, alarms, and operating history. Horizon SCADA turns structured plant data into a practical workspace for operators, engineers, and managers.",
+    "short_description_fa": "از نمای کلی سایت تا جزئیات یک تجهیز؛ افق، پایش فرایند، رسیدگی به آلارم‌ها و تحلیل سوابق را در یک محیط منسجم کنار هم می‌آورد تا تیم بهره‌برداری تصویر روشن‌تری از کار خود داشته باشد.",
+    "description": "Industrial information becomes useful when it keeps its context. Horizon connects each site, operating unit, equipment item, and signal so a reading can lead to its trend, an alarm to its history, and a command to its execution record.\n\nThe same structure supports process displays, scoped access, and multi-site supervision. Teams can start with the operating area they need today and expand the configuration as the plant and their requirements develop.",
+    "description_fa": "وقتی یک مقدار از محدوده معمول خارج می‌شود، فقط دیدن عدد کافی نیست. باید بدانیم این مقدار به کدام تجهیز مربوط است، پیش از آن چه اتفاقی افتاده، چه کسی امکان اقدام دارد و نتیجه آن اقدام کجا ثبت می‌شود. افق این ارتباط‌ها را در ساختار خود نگه می‌دارد؛ از سایت و واحد فرایندی تا تجهیز، تگ، آلارم و سابقه فرمان.\n\nاین ساختار مشترک، پایه نمایش فرایند، گزارش‌گیری و کنترل دسترسی است. بهره‌بردار برای پیگیری وضعیت از یک محیط به محیطی جدا منتقل نمی‌شود و تیم فنی نیز با اضافه‌شدن تجهیزات و نیازهای تازه، سامانه را در همان چارچوب گسترش می‌دهد.",
+    "status": "active",
+    "published": true,
+    "featured": true
+  },
+  "features": [
+    {
+      "title": "One operating model",
+      "title_fa": "یک مدل مشترک برای کل فرایند",
+      "description": "Sites, units, equipment, and signals stay connected across screens, history, and permissions.",
+      "description_fa": "هر سایت و واحد، تجهیزات و سیگنال‌های مرتبط خود را دارد. همین رابطه در نمایش فرایند، سوابق، گزارش‌ها و محدوده دسترسی حفظ می‌شود."
+    },
+    {
+      "title": "Displays built around your plant",
+      "title_fa": "نمایی که با ساختار مجموعه رشد می‌کند",
+      "description": "Use hierarchy-backed process pages and arrange image or diagram elements in the visual editor.",
+      "description_fa": "اجزای تعریف‌شده در ساختار مجموعه، مبنای صفحات HMI هستند. جای‌گذاری تصویری آن‌ها با ویرایشگر انجام می‌شود و نمایش زنده به تگ‌های تجهیز متصل می‌ماند."
+    },
+    {
+      "title": "Alarms with a route to action",
+      "title_fa": "از هشدار تا پیگیری اقدام",
+      "description": "Keep activation, acknowledgement, return events, and temporary shelving in an accountable operating record.",
+      "description_fa": "فعال‌شدن، تأیید بهره‌بردار، بازگشت فرایند و تعلیق موقت، هرکدام وضعیت و سابقه خود را دارند؛ همراه با علت، پیامد و اقدام اصلاحی تعریف‌شده برای آلارم."
+    },
+    {
+      "title": "History that answers operating questions",
+      "title_fa": "تاریخچه‌ای برای پاسخ به پرسش‌های بهره‌برداری",
+      "description": "Compare trends and calculate interval-based statistics, time-weighted averages, and flow volumes.",
+      "description_fa": "روندها را مقایسه کنید، تغییرات یک بازه را ببینید و از داده ثبت‌شده برای محاسبه میانگین زمانی، حجم عبوری و شاخص‌های آماری استفاده کنید."
+    },
+    {
+      "title": "Commands you can follow",
+      "title_fa": "فرمانی که مسیر آن روشن است",
+      "description": "Review who requested a command, its scheduled execution, queue status, and agent feedback.",
+      "description_fa": "از ثبت درخواست و زمان اجرای آن تا نتیجه بازگشتی عامل ارتباطی، مسیر فرمان قابل پیگیری است. ست‌پوینت نیز در همین بستر و با بررسی مجوز و مقدار ارسال می‌شود."
+    },
+    {
+      "title": "The right scope for each responsibility",
+      "title_fa": "دسترسی متناسب با مسئولیت",
+      "description": "Combine action permissions, assigned operating locations, and explicit user exceptions.",
+      "description_fa": "مجوز انجام کار از نقش می‌آید، محدوده آن از محل مسئولیت کاربر و استثناها از قواعد اختصاصی او؛ برای مشاهده، گزارش‌گیری و فرمان، به‌صورت جداگانه."
+    }
+  ],
+  "specifications": [
+    [
+      "Operating model",
+      "Enterprise to equipment and tags",
+      "مدل مجموعه",
+      "از سازمان و سایت تا تجهیز و تگ"
+    ],
+    [
+      "Working environment",
+      "Browser-based HMI and operational records",
+      "محیط کار",
+      "HMI و سوابق بهره‌برداری تحت وب"
+    ],
+    [
+      "Field integration",
+      "OPC UA with site-specific agent configuration",
+      "ارتباط میدانی",
+      "OPC UA با پیکربندی عامل هر سایت"
+    ],
+    [
+      "Alarm handling",
+      "Events, acknowledgement, shelving, suppression and seven report groups",
+      "مدیریت آلارم",
+      "رویداد، تأیید، تعلیق، مسکوت‌سازی و هفت گروه گزارش"
+    ],
+    [
+      "History",
+      "Trends, per-tag HDA calculations and archive policies",
+      "داده تاریخی",
+      "روند، محاسبه HDA برای هر تگ و سیاست آرشیو"
+    ],
+    [
+      "Commands",
+      "Validated, scheduled requests with execution records",
+      "فرمان",
+      "درخواست اعتبارسنجی‌شده و زمان‌بندی با سابقه اجرا"
+    ],
+    [
+      "Access",
+      "Per-user overrides, role actions and assigned resource scopes",
+      "دسترسی",
+      "استثنای کاربر، مجوز نقش و محدوده منابع"
+    ],
+    [
+      "Multiple sites",
+      "Site identities, agents and a shared application",
+      "چندسایتی",
+      "هویت و عامل مستقل سایت‌ها در یک برنامه مشترک"
+    ]
+  ],
+  "sections": [
+    {
+      "key": "hierarchy",
+      "title": "Start with the structure of the operation",
+      "title_fa": "ابتدا ساختار مجموعه را بشناسیم",
+      "nav_title": "Operating model",
+      "nav_title_fa": "ساختار مجموعه",
+      "body": "The hierarchy follows Enterprise → Site → Area → WorkUnit → Unit → Equipment. A Tag belongs to equipment; alarms, history, commands, and setpoints refer back to that signal. This is a working information model: it gives a reading a physical context and gives screens and access rules the same reference. Equipment classes also carry shared properties, symbols, and state engines. Individual equipment keeps its own property values, operating events, working hours, and service records.\n\nFor Abadeh, the wastewater plant is the site. Screening, grit removal, lagoons, pumping, and chemical systems provide the process context. The example below illustrates how a pumping unit, a pump, and its signals can be mapped into the model. It is a configuration example, rather than a published list of the plant’s actual tag codes.",
+      "body_fa": "مدل اطلاعاتی افق از سازمان آغاز می‌شود و به سایت، ناحیه، واحد کاری، واحد و تجهیز می‌رسد. تگ به تجهیز متصل است و تاریخچه، آلارم، فرمان و ست‌پوینت به همان تگ ارجاع می‌دهند. نتیجه این است که یک عدد بدون زمینه در سامانه رها نمی‌شود؛ محل آن در فرایند مشخص است و نمایش، گزارش و دسترسی همگی به همان ساختار رجوع می‌کنند.\n\nکلاس تجهیز، مشخصات مشترک، نماد و منطق نمایش وضعیت را تعریف می‌کند. هر تجهیز نیز مقادیر مشخصات، رویدادهای کارکرد، ساعات کار و سوابق سرویس خود را نگه می‌دارد. بنابراین پرونده یک پمپ، فراتر از چند تگ است؛ هم وضعیت فعلی را دارد و هم ردپای بهره‌برداری و نگهداری را.\n\nدر پروژه آباده، تصفیه‌خانه نقش سایت را دارد و بخش‌هایی مانند آشغال‌گیری، دانه‌گیری، لاگون‌ها، پمپاژ و سامانه‌های شیمیایی، زمینه فرایندی آن را تشکیل می‌دهند. نمودار زیر یک نمونه آموزشی از مدل‌کردن مسیر پمپاژ تا پمپ و سیگنال‌های آن است؛ نام‌های نمونه، جایگزین فهرست واقعی تجهیزات و کد تگ‌های پروژه نیستند.",
+      "diagram": "hierarchy"
+    },
+    {
+      "key": "hmi",
+      "title": "A process display connected to the model",
+      "title_fa": "HMI متصل به ساختار واقعی تجهیزات",
+      "nav_title": "HMI",
+      "nav_title_fa": "نمای فرایند",
+      "body": "HMI pages read their sites, descendants, equipment, and tags from the hierarchy. Adding a valid node makes it available to the corresponding page and editing workflow; visual placement is a deliberate configuration step. This keeps data definition separate from drawing a process layout, without asking the team to recreate every equipment relationship on every screen.\n\nIn the visual editor, arrange hierarchy nodes and equipment over a background image or diagram with pointer-based placement. Equipment-class symbols and state engines provide a consistent visual vocabulary. Follow the hierarchy down to equipment details, associated signals, and permitted actions. Live updates follow the user’s allowed scope; adding a node does not automatically design a complete P&ID.",
+      "body_fa": "صفحات HMI اطلاعات خود را از سلسله‌مراتب مجموعه می‌گیرند. وقتی سایت، واحد یا تجهیزی به ساختار اضافه می‌شود، آن جزء در مسیر مربوط و ابزار چیدمان در دسترس قرار می‌گیرد. لازم نیست ارتباط تجهیز و سیگنال‌های آن دوباره در هر صفحه تعریف شود؛ مدل داده، مرجع مشترک نمایش است.\n\nبرای ساخت نما، اجزای موردنیاز را روی تصویر پس‌زمینه یا نمودار فرایندی جای‌گذاری می‌کنید و با کشیدن و رهاکردن، چیدمان را شکل می‌دهید. نماد و منطق وضعیت از کلاس تجهیز می‌آید تا نمایش تجهیزات مشابه، زبان بصری یکسانی داشته باشد. جای‌گذاری نهایی با طراح است؛ اضافه‌کردن داده به ساختار، به‌معنای ترسیم خودکار یک نقشه کامل فرایندی نیست.\n\nکاربر از نمای سایت به بخش‌ها و در نهایت صفحه تجهیز می‌رسد. مقادیر و وضعیت‌های زنده در ارتباط با تگ‌های همان تجهیز نمایش داده می‌شوند و عملیات در دسترس نیز با مجوز او هماهنگ است.",
+      "diagram": ""
+    },
+    {
+      "key": "alarms",
+      "title": "An alarm is a recorded operating sequence",
+      "title_fa": "آلارم، شروع یک مسیر رسیدگی است",
+      "nav_title": "Alarm lifecycle",
+      "nav_title_fa": "چرخه آلارم",
+      "body": "An alarm definition includes its source tag, trigger condition, priority, cause, consequence, and corrective action. Horizon records activation, acknowledgement, return, shelving, and suppression events. These are concrete capabilities associated with ISA‑18.2 alarm-management concepts; the catalog does not assert certified compliance. ISA‑95 instead concerns enterprise/control integration and equipment modelling.\n\nActivation marks the alarm active and unacknowledged. Acknowledgement records that the operator has seen it; it does not clear the process condition. A return event clears the active flag when the condition becomes normal. Return may occur before acknowledgement. In the current implementation, an inactive acknowledged alarm is displayed as Return; an inactive unacknowledged alarm is displayed as Normal. Event history preserves the transitions in either case.\n\nShelving and suppression are separate flags with their own events. Shelving supports a temporary duration and reappearance; neither flag should be mistaken for proof that the process fault has ended. The diagram separates process condition, operator acknowledgement, and visibility.",
+      "body_fa": "برای هر آلارم، تگ منبع، شرط تحریک، اولویت، علت احتمالی، پیامد و اقدام اصلاحی تعریف می‌شود. به این ترتیب، بهره‌بردار فقط با یک چراغ هشدار روبه‌رو نیست؛ می‌تواند بداند هشدار به چه علت مطرح شده و چه اقدامی برای آن پیش‌بینی شده است. در مدل برنامه نیز فیلدهای توجیه و مستندسازی آلارم با اشاره به ISA‑18.2 وجود دارند. این معرفی، شرح قابلیت‌های پیاده‌شده است و ادعای گواهی انطباق ندارد.\n\nبا وقوع شرط، آلارم «فعال و تأییدنشده» می‌شود. تأیید بهره‌بردار یعنی هشدار دیده شده است؛ تا زمانی که شرط فرایندی برقرار باشد، آلارم همچنان فعال می‌ماند. عادی‌شدن فرایند، رویداد بازگشت را ثبت می‌کند و ممکن است پیش یا پس از تأیید رخ دهد. در نمایش فعلی افق، حالت غیرفعالِ تأییدشده با عنوان «بازگشت» و حالت غیرفعالِ تأییدنشده با عنوان «عادی» دیده می‌شود؛ تاریخچه، رویدادهای هر دو مسیر را حفظ می‌کند.\n\nتعلیق موقت و مسکوت‌کردن، وضعیت‌هایی جدا از فعال‌بودن فرایند هستند. برای تعلیق می‌توان مدت تعیین کرد و رویدادهای اعمال و رفع آن را دید. پنهان‌شدن هشدار به‌معنای رفع علت آن نیست؛ همین تفکیک برای بررسی شیفت و بازبینی تصمیم‌ها اهمیت دارد.",
+      "diagram": "alarms"
+    },
+    {
+      "key": "alarm-reports",
+      "title": "Understand the alarm load, not only the alarm list",
+      "title_fa": "گزارش‌هایی برای دیدن الگوی هشدارها",
+      "nav_title": "Alarm reports",
+      "nav_title_fa": "گزارش آلارم",
+      "body": "The report set covers frequency, active duration, response time, standing alarms, shelved/suppressed alarms, flood analysis, and priority distribution. Frequency helps identify repeated contributors; duration and standing alarms expose unresolved conditions; response time reviews the gap to acknowledgement. Flood and priority views put the workload in context.\n\nReports use date and hierarchy filters and the user’s allowed resource scope. Tables and Excel exports support technical review and shift discussions. Report results describe recorded events and configured analysis parameters; they are not a guarantee of plant safety or a substitute for an alarm philosophy.",
+      "body_fa": "فهرست آلارم فعال برای کار لحظه‌ای لازم است، اما برای بهبود بهره‌برداری باید الگوها را هم دید. گزارش فراوانی نشان می‌دهد کدام هشدارها بیشتر تکرار شده‌اند. گزارش مدت فعال‌بودن و هشدارهای ماندگار، توجه را به شرایطی جلب می‌کنند که طولانی شده‌اند. گزارش زمان پاسخ نیز فاصله رخداد تا تأیید را برای بازبینی عملکرد تیم روشن می‌کند.\n\nگزارش تعلیق و مسکوت‌سازی، هشدارهای کنارگذاشته‌شده را قابل مرور نگه می‌دارد. تحلیل طوفان آلارم، تجمع رخدادها در بازه‌های زمانی را نشان می‌دهد و توزیع اولویت کمک می‌کند ترکیب بار هشدارها بررسی شود. این هفت گروه گزارش، از مشاهده روزانه تا جلسه فنی بازنگری آلارم کاربرد دارند.\n\nانتخاب بازه زمانی و محدوده سلسله‌مراتب، همراه با کنترل دسترسی کاربر، دامنه گزارش را مشخص می‌کند. جدول و خروجی Excel برای بررسی و مستندسازی در دسترس‌اند. تفسیر نتایج نیز باید با تنظیمات گزارش و فلسفه آلارم مجموعه انجام شود.",
+      "diagram": ""
+    },
+    {
+      "key": "history",
+      "title": "From recorded values to an operating explanation",
+      "title_fa": "از سابقه عددها تا تحلیل رفتار فرایند",
+      "nav_title": "History & HDA",
+      "nav_title_fa": "تاریخچه و HDA",
+      "body": "Trends provide a time-based view of signals so engineers can compare changes around an event. Historical Data Access (HDA) adds calculations over selected intervals. Each selected tag can have its own start/end, interval, and function, with its equipment path and engineering unit retained in the result.\n\nSupported calculations include average, minimum, maximum, count, standard deviation, variance, range, median, P10/P90, first/last value, difference, sample total, and timestamps of actual extrema. Time-weighted average and flow-to-volume integration use valid temporal coverage and configured maximum-gap rules. A sample total is not interchangeable with an integrated physical volume; volume also requires a supported flow unit.\n\nArchive policies control recording intervals, change deadbands, and retention. The report exposes gaps and calculation errors rather than replacing missing data with a normal value. Quality-related function names exist in the API, but the current historian does not persist source signal quality: those results are unknown/unavailable, not evidence of good-quality data.\n\nHistorical reports are available on screen and as CSV or Excel exports. The per-tag configuration and equipment context carry through the reporting pipeline, with separate access checks for export and audit recording of downloads. This supports shift reporting and subsequent analysis without treating a chart screenshot as the underlying dataset.",
+      "body_fa": "نمودار روند به شما کمک می‌کند رفتار یک یا چند سیگنال را در طول زمان کنار هم ببینید؛ مثلاً بررسی کنید تغییر یک مقدار، پیش از رخداد آلارم آغاز شده یا پس از آن. تاریخچه با مسیر تجهیز همراه است تا هنگام مقایسه، بدانیم هر منحنی دقیقاً به کدام بخش فرایند تعلق دارد.\n\nگزارش HDA یک گام جلوتر می‌رود. برای هر تگ می‌توان بازه زمانی، فاصله گزارش و تابع محاسبه را جداگانه انتخاب کرد. میانگین، کمینه و بیشینه، تعداد نمونه، انحراف معیار و واریانس، دامنه تغییرات، میانه و صدک‌های ۱۰ و ۹۰، مقدار ابتدا و انتها، اختلاف آن‌ها، مجموع نمونه‌ها و زمان وقوع کمینه و بیشینه در مجموعه توابع وجود دارند.\n\nمیانگین زمانی و حجم عبوری برای پرسش‌های متفاوتی ساخته شده‌اند. میانگین زمانی، مدت پوشش داده را در محاسبه دخالت می‌دهد؛ حجم نیز از انتگرال دبی با واحد سازگار به دست می‌آید. «جمع نمونه‌ها» را نباید به‌جای حجم واقعی تفسیر کرد. فاصله‌های بیش از حد مجاز و بازه‌های فاقد پوشش معتبر، مبنای محاسبه این دو تابع قرار نمی‌گیرند.\n\nسیاست آرشیو، فاصله ثبت، آستانه تغییر و مدت نگهداری داده را مشخص می‌کند. در نسخه بررسی‌شده، کیفیت منبع سیگنال در تاریخچه ذخیره نمی‌شود؛ بنابراین گزینه‌های مربوط به درصد یا مدت کیفیت خوب و بد، نتیجه معتبر کیفیت ارائه نمی‌کنند و نامشخص گزارش می‌شوند. این شفافیت کمک می‌کند گزارش، تصویری دقیق از داده موجود بدهد.\n\nنتیجه گزارش تاریخی در صفحه قابل بررسی است و می‌توان خروجی CSV یا Excel تهیه کرد؛ برای گزارش شیفت، تحلیل تکمیلی یا مستندسازی بررسی‌ها. پیکربندی هر تگ و زمینه تجهیز در مسیر گزارش حفظ می‌شوند و خروجی‌گرفتن نیز مجوز و سابقه ثبت خود را دارد. بنابراین تیم می‌تواند به داده قابل بررسی رجوع کند، نه فقط تصویری از یک نمودار.",
+      "diagram": "history"
+    },
+    {
+      "key": "commands",
+      "title": "Equipment, setpoints, and commands in one context",
+      "title_fa": "تجهیز، ست‌پوینت و فرمان در یک زمینه مشترک",
+      "nav_title": "Equipment & commands",
+      "nav_title_fa": "تجهیز و فرمان",
+      "body": "Equipment records combine classification, custom properties, out-of-service state, operating events, working hours, and service entries. Tags identify what is measured, displayed, or commanded, together with engineering units, limits, and field mapping. This context lets a team distinguish a measurement from a feedback signal and from a command request.\n\nA setpoint gives a meaningful name and description to its linked tag. Writing an authorised output checks the permitted scope and configured value rules before creating a command request. The queue records creator, requested value, schedule, execution state, attempts, feedback/error, and completion time. Pending requests can be cancelled where permitted.\n\nFollow the command through Pending, In progress, Done, Failed, or Cancelled. A recorded successful write is still distinct from independent field feedback that the physical equipment reached the intended state; process interlocks and safety functions remain the responsibility of the control design.",
+      "body_fa": "پرونده تجهیز، کلاس و مشخصات فنی، خارج‌ازسرویس‌بودن، رویدادهای کارکرد، ساعات کار و سوابق سرویس را کنار هم نگه می‌دارد. تگ‌ها نیز معنای سیگنال را مشخص می‌کنند: مقدار اندازه‌گیری، بازخورد وضعیت یا خروجی فرمان، همراه با واحد مهندسی، حدود مجاز و نگاشت ارتباط میدانی. این تفکیک باعث می‌شود نمایش یک وضعیت با درخواست تغییر آن اشتباه نشود.\n\nست‌پوینت، مقدار هدف را با نام و توضیح مشخص به تگ مربوط پیوند می‌دهد. هنگام ارسال مقدار، مجوز کاربر، محدوده تجهیز و قواعد اعتبارسنجی بررسی می‌شوند. سپس درخواست در صف فرمان ثبت می‌شود؛ با نام درخواست‌کننده، مقدار، زمان‌بندی و وضعیت اجرا.\n\nفرمان می‌تواند در انتظار اجرا، در حال اجرا، انجام‌شده، ناموفق یا لغوشده باشد. تعداد تلاش، خطای بازگشتی و زمان پایان نیز در سابقه می‌ماند و درخواست منتظر، در صورت داشتن مجوز، قابل لغو است. این مسیر به تیم کمک می‌کند بفهمد چه چیزی درخواست شده و عامل ارتباطی چه نتیجه‌ای برگردانده است.\n\nموفقیت نوشتن فرمان، به‌تنهایی اثبات تغییر وضعیت فیزیکی تجهیز نیست؛ برای آن باید بازخورد میدانی را هم دید. منطق اینترلاک و حفاظت فرایند نیز در طراحی سیستم کنترل جای خود را دارد.",
+      "diagram": ""
+    },
+    {
+      "key": "access",
+      "title": "Who can do what, and where",
+      "title_fa": "چه کسی، چه کاری را، در کدام محدوده انجام می‌دهد",
+      "nav_title": "Access model",
+      "nav_title_fa": "مدل دسترسی",
+      "body": "For ordinary users, UserPermissionOverride supplies explicit grants or denials for an action, globally or on a particular resource scope. An applicable global denial blocks that permission. A scoped grant can provide a specific exception even when the role does not grant the action; scoped denials remove resources from the resulting access scope. Active dates and source-IP conditions are evaluated before rules apply.\n\nThe normal baseline combines PersonnelClass → RolePermission (what the user may do) with ScopeAssignment (where). Assignments can reference enterprise, site, area, work unit, unit, or equipment. Conditions include validity windows and IP networks; role permissions can also restrict operating times. Access rules propagate through descendants and are applied to backend resource queries, report/export paths, and live HMI access.\n\nA pumping operator might view and acknowledge alarms for an assigned area without gaining command or configuration rights. An engineer can receive a temporary grant for a particular unit, while an explicit deny excludes another resource. These are examples of policy configuration, not Abadeh personnel assignments. Superuser is a separate administrative bypass and must be governed accordingly.",
+      "body_fa": "در افق، دسترسی صرفاً انتخاب یک عنوان شغلی نیست. برای کاربران عادی، قواعد اختصاصی UserPermissionOverride امکان اعطا یا منع یک عملیات را در سطح سراسری یا یک محدوده مشخص فراهم می‌کنند. منع سراسری معتبر، آن مجوز را می‌بندد؛ اعطای محدود می‌تواند یک استثنای مشخص به دسترسی نقش اضافه کند و منع محدود، منابع مربوط را از دسترس خارج می‌کند. اعتبار زمانی و شرط IP پیش از اعمال قاعده بررسی می‌شوند.\n\nپایه معمول دسترسی از دو بخش تشکیل می‌شود: PersonnelClass و RolePermission مشخص می‌کنند کاربر «چه کاری» می‌تواند انجام دهد؛ ScopeAssignment مشخص می‌کند این اختیار «کجا» معتبر است. محدوده می‌تواند سازمان، سایت، ناحیه، واحد کاری، واحد یا تجهیز باشد و منابع زیرمجموعه نیز در همین چارچوب بررسی می‌شوند. برای نقش، بازه ساعات مجاز و برای قواعد، تاریخ اعتبار و شبکه IP قابل تعریف است.\n\nبرای مثال، بهره‌بردار بخش پمپاژ می‌تواند در محدوده مسئولیت خود وضعیت را ببیند و آلارم را تأیید کند، بدون آنکه مجوز تغییر تنظیمات یا ارسال فرمان داشته باشد. برای یک مهندس نیز می‌توان دسترسی موقت به واحد مشخصی تعریف کرد. این‌ها نمونه سیاست‌گذاری‌اند، نه معرفی دسترسی اشخاص واقعی آباده.\n\nکنترل‌ها در سمت سرور، پرس‌وجوی منابع، مسیر گزارش و خروجی و دسترسی زنده HMI اعمال می‌شوند؛ پنهان‌کردن یک دکمه، تنها لایه کنترل نیست. حساب مدیرکل مسیر مدیریتی جداگانه‌ای دارد که از این محدودیت‌های عادی عبور می‌کند و باید با مسئولیت مشخص مدیریت شود.",
+      "diagram": "access"
+    },
+    {
+      "key": "integration",
+      "title": "Several sites, one operational workspace",
+      "title_fa": "چند سایت در یک محیط یکپارچه",
+      "nav_title": "Sites & security",
+      "nav_title_fa": "سایت‌ها و امنیت",
+      "body": "Each site keeps its hierarchy, communication settings, and agent identity. Site agents exchange field data through OPC UA and send it into the shared application. Local buffering and retry logic support recovery from temporary communication interruptions; their capacity and operating conditions must be sized for the project. Users see the sites allowed by their access rules rather than separate disconnected applications.\n\nSecurity is implemented through several layers: server-side action and scope checks, login/session controls, audit records, and certificate-based agent identity with mTLS verification when configured. OPC UA security policies and protected directory connections are also configurable. These mechanisms are a basis for a security-conscious deployment, not a universal assurance: certificates, network boundaries, transport encryption, and operating procedures must be configured and maintained for the installation.",
+      "body_fa": "هر سایت ساختار تجهیزات، تنظیمات ارتباطی و هویت عامل ارتباطی خود را دارد. عامل سایت، داده میدانی را از مسیر OPC UA دریافت می‌کند و به سامانه مشترک می‌رساند. بافر محلی و تلاش مجدد، برای بازیابی تبادل داده پس از وقفه ارتباطی در نظر گرفته شده‌اند؛ ظرفیت و شرایط کار آن‌ها باید متناسب با پروژه تعیین شود.\n\nدر مرکز، اطلاعات سایت‌ها در یک مدل مشترک قرار می‌گیرند. مدیر می‌تواند با مجوز مناسب چند مجموعه را در همان برنامه دنبال کند و بهره‌بردار فقط محدوده مسئولیت خود را ببیند. یکپارچگی به‌معنای حذف مرز مسئولیت سایت‌ها نیست؛ ساختار، عامل و دسترسی هرکدام حفظ می‌شود.\n\nامنیت را در چند لایه دنبال کرده‌ایم: بررسی عملیات و محدوده در سرور، کنترل ورود و نشست، ثبت رویدادهای قابل ممیزی و شناسایی عامل با گواهی و بررسی mTLS در پیکربندی مربوط. سیاست امنیتی OPC UA و ارتباط محافظت‌شده با سرویس دایرکتوری نیز قابل تنظیم‌اند.\n\nاین قابلیت‌ها مبنای طراحی امن هستند و نتیجه نهایی به پیکربندی درست گواهی‌ها، رمزنگاری ارتباط، تفکیک شبکه و نگهداری سامانه وابسته است. در بررسی فنی پروژه، همین جزئیات را همراه تیم شما مشخص می‌کنیم تا انتخاب‌های امنیتی با محیط بهره‌برداری هماهنگ باشند.",
+      "diagram": "integration"
+    },
+    {
+      "key": "evolution",
+      "title": "Built to develop with your operation",
+      "title_fa": "همراه با تجربه شما، افق هم کامل‌تر می‌شود",
+      "nav_title": "Product development",
+      "nav_title_fa": "مسیر توسعه",
+      "body": "This catalog describes the implementation reviewed for this edition, not a frozen limit on the product. Horizon continues to develop as operating feedback reveals better ways to work. New capabilities are reviewed, prioritised, and released in increments.\n\nBring your reporting questions, operating routines, and integration needs to a demonstration. We can identify what is available, what needs configuration, and what belongs in the next development scope. Planned capabilities are discussed explicitly rather than presented as already delivered.",
+      "body_fa": "این کاتالوگ، تصویری از قابلیت‌های بررسی‌شده افق است؛ نه نقطه پایان آن. نرم‌افزار همراه با تجربه بهره‌برداران، پرسش‌های تیم فنی و نیازهای تازه مجموعه‌ها رشد می‌کند. هر پیشنهاد می‌تواند به فرصتی برای ساده‌ترشدن کار روزانه، گزارش بهتر یا ارتباط منسجم‌تر میان بخش‌ها تبدیل شود.\n\nاگر در مجموعه شما مسئله‌ای هست که هنوز برایش پاسخ مناسبی پیدا نکرده‌اید، خوشحال می‌شویم آن را با هم بررسی کنیم. در جلسه معرفی، روشن می‌کنیم چه چیزی همین امروز آماده است، چه بخشی به پیکربندی نیاز دارد و کدام نیاز باید وارد برنامه توسعه شود. قابلیت‌های تازه پس از بررسی و آزمون، به‌تدریج منتشر می‌شوند؛ با هدف تجربه بهتر برای کسانی که هر روز با سامانه کار می‌کنند.",
+      "diagram": ""
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can we see the system with our own operating scenario?",
+      "question_fa": "می‌توانیم سامانه را با سناریوی مجموعه خود ببینیم؟",
+      "answer": "Yes. Share the process structure, a representative set of signals, and the questions your operators need to answer. The demonstration can follow that workflow and distinguish existing capabilities from project-specific configuration.",
+      "answer_fa": "بله. ساختار فرایند، چند سیگنال نمونه و پرسش‌هایی را که تیم بهره‌برداری باید پاسخ دهد با ما در میان بگذارید. معرفی سامانه را می‌توانیم حول همان مسیر پیش ببریم و قابلیت آماده را از پیکربندی یا توسعه موردنیاز پروژه جدا کنیم."
+    },
+    {
+      "question": "Does acknowledgement clear an alarm?",
+      "question_fa": "تأیید آلارم یعنی خطا برطرف شده است؟",
+      "answer": "No. Acknowledgement records operator awareness. Return is a separate process event; shelving and suppression are separate visibility states.",
+      "answer_fa": "خیر. تأیید، دیده‌شدن هشدار توسط بهره‌بردار را ثبت می‌کند. رفع شرط فرایندی با رویداد بازگشت مشخص می‌شود و تعلیق یا مسکوت‌کردن نیز وضعیت‌های جداگانه‌ای هستند."
+    },
+    {
+      "question": "Can each site have its own operators?",
+      "question_fa": "برای هر سایت می‌توان بهره‌بردار مستقل تعریف کرد؟",
+      "answer": "Yes. Role actions combine with assigned resource scopes and explicit user exceptions. Cross-site visibility is granted deliberately, not inherited merely because sites share an application.",
+      "answer_fa": "بله. مجوز عملیات، محدوده منابع و استثناهای اختصاصی کاربر کنار هم بررسی می‌شوند. مشترک‌بودن برنامه، به‌خودی‌خود دسترسی به همه سایت‌ها ایجاد نمی‌کند."
+    },
+    {
+      "question": "Is the product finished or still developing?",
+      "question_fa": "قابلیت‌های محصول در همین کاتالوگ محدود می‌ماند؟",
+      "answer": "The catalog documents reviewed functionality. Further work follows prioritised operating needs and tested releases, with scope agreed before commitments.",
+      "answer_fa": "خیر. این معرفی، قابلیت‌های بررسی‌شده را توضیح می‌دهد. نیازهای تازه پس از بررسی، اولویت‌بندی و آزمون به نسخه‌های بعدی راه پیدا می‌کنند و دامنه هر تعهد پیش از اجرا مشخص می‌شود."
+    }
+  ]
+}

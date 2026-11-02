@@ -1,0 +1,26 @@
+{% load site_copy %}
+<section class="motion-studio" data-studio aria-label="{% phrase 'Explore our engineering process' 'مسیر مهندسی ما را کشف کنید' %}">
+  <div class="studio-drawing" aria-hidden="true">
+    <svg viewBox="0 0 460 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g class="studio-grid"><path d="M0 62H460M0 124H460M0 186H460M76 0V248M153 0V248M230 0V248M307 0V248M384 0V248"/></g>
+      <g class="studio-orbit"><ellipse cx="230" cy="124" rx="158" ry="84"/><ellipse cx="230" cy="124" rx="118" ry="118" transform="rotate(-30 230 124)"/></g>
+      <g class="studio-links"><path class="signal-path signal-a" d="M74 78C150 78 148 124 230 124"/><path class="signal-path signal-b" d="M386 74C310 74 312 124 230 124"/><path class="signal-path signal-c" d="M230 124C300 124 310 196 382 196"/></g>
+      <g class="studio-node node-a"><rect x="47" y="51" width="54" height="54" rx="15"/><path d="M61 78h7l5-10 6 20 5-10h7"/></g>
+      <g class="studio-node node-b"><rect x="359" y="47" width="54" height="54" rx="15"/><path d="m373 67 13-6 13 6-13 7-13-7Zm0 10 13 7 13-7m-26 10 13 7 13-7"/></g>
+      <g class="studio-node node-c"><rect x="355" y="169" width="54" height="54" rx="15"/><path d="m369 196 9 9 18-19"/></g>
+      <g class="studio-core"><rect x="186" y="80" width="88" height="88" rx="27"/><rect x="199" y="93" width="62" height="62" rx="19"/><path d="m213 114-10 10 10 10m34-20 10 10-10 10m-11-27-13 54"/></g>
+      <circle class="orbit-bead bead-a" cx="230" cy="40" r="5"/><circle class="orbit-bead bead-b" cx="230" cy="208" r="4"/>
+    </svg>
+    <span class="studio-index" aria-hidden="true">01 / 03</span>
+  </div>
+  <div class="studio-steps" role="group" aria-label="{% phrase 'Engineering stages' 'مرحله‌های مهندسی' %}">
+    <button type="button" data-step="0" aria-pressed="true" aria-controls="studio-discovery">{% phrase 'Discover' 'شناخت' %}</button>
+    <button type="button" data-step="1" aria-pressed="false" aria-controls="studio-design">{% phrase 'Design' 'طراحی' %}</button>
+    <button type="button" data-step="2" aria-pressed="false" aria-controls="studio-delivery">{% phrase 'Deliver' 'توسعه' %}</button>
+  </div>
+  <div class="studio-copy" aria-live="polite">
+    <p id="studio-discovery" data-panel="0">{% phrase 'Start with the way your team works. Map the process, understand the constraints, and define the problem together.' 'از شیوه کار تیم شما شروع می‌کنیم؛ فرایند را می‌شناسیم، محدودیت‌ها را بررسی می‌کنیم و مسئله را با هم روشن می‌کنیم.' %}</p>
+    <p id="studio-design" data-panel="1">{% phrase 'Connect the process to a clear solution: data models, interfaces, integrations, and decisions that can be reviewed.' 'فرایند را به راهکاری روشن پیوند می‌دهیم؛ با مدل داده، رابط کاربری، ارتباط سامانه‌ها و تصمیم‌هایی که قابل بررسی‌اند.' %}</p>
+    <p id="studio-delivery" data-panel="2">{% phrase 'Build a working increment, test it, and review it with your team. Real feedback shapes the next step.' 'یک بخش قابل استفاده می‌سازیم، آن را می‌آزماییم و همراه تیم شما بررسی می‌کنیم؛ بازخورد واقعی، گام بعد را شکل می‌دهد.' %}</p>
+  </div>
+</section>

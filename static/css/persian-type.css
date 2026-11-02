@@ -1,0 +1,105 @@
+/* Persian-only typography roles. English pages retain their existing styles. */
+html[lang="fa"] {
+  --fa-display: "Vazirmatn", "Inter", sans-serif;
+  --fa-reading: "Vazirmatn", "Inter", sans-serif;
+  --fa-interface: "Vazirmatn", "Inter", sans-serif;
+  --sans: var(--fa-reading);
+  --mono: var(--fa-interface);
+}
+html[lang="fa"] body { font-family: var(--fa-reading); font-size: 15px; line-height: 2.05; }
+html[lang="fa"] :is(h1,h2,h3,.brand) { font-family: var(--fa-display); font-weight: 700; letter-spacing: 0; }
+html[lang="fa"] h1 { line-height: 1.65; }
+html[lang="fa"] .home-intro h1 { font-size: clamp(38px,4.5vw,60px); line-height: 1.65; }
+html[lang="fa"] .page-heading h1 { font-size: clamp(34px,4.1vw,54px); line-height: 1.6; }
+html[lang="fa"] h2 { line-height: 1.75; }
+html[lang="fa"] h3 { line-height: 1.8; }
+/* Menus, actions and forms use a compact Persian interface face. */
+html[lang="fa"] :is(.nav nav,.nav-actions,.menu-toggle,.button,.text-link,.language-switch button,.theme-toggle,.eyebrow,.brand small,.index,.intro-note,.directory-foot,.filters,.tags,.tag,input,select,textarea,label,.pagination,.catalog-nav,.catalog-breadcrumb,.catalog-status,.catalog-colophon,.catalog-facts-heading,.catalog-facts-foot,.engineering-table thead,footer) {
+  font-family: var(--fa-interface);
+  letter-spacing: 0;
+}
+html[lang="fa"] .nav nav { font-size: 14px; font-weight: 400; }
+html[lang="fa"] .brand { font-size: 18px; }
+html[lang="fa"] .brand small { font-size: 11px; font-weight: 400; }
+html[lang="fa"] .eyebrow { font-size: 11px; line-height: 1.9; }
+html[lang="fa"] .button { font-size: 14px; font-weight: 700; }
+html[lang="fa"] .button.small { font-size: 12px; }
+html[lang="fa"] :is(.text-link,.home-intro .actions .text-link) { font-size: 13px; }
+html[lang="fa"] .theme-toggle { font-size: 12px; }
+html[lang="fa"] .language-switch button { font-size: 13px; }
+html[lang="fa"] .lead,html[lang="fa"] .home-intro .lead { font-size: 16px; line-height: 2.2; }
+html[lang="fa"] .intro-note { font-size: 11px; line-height: 2; }
+html[lang="fa"] .directory-heading .eyebrow { font-size: 11px; }
+html[lang="fa"] .directory-item h2 { font-size: 22px; line-height: 1.6; }
+html[lang="fa"] .directory-item p { font-family: var(--fa-reading); font-size: 13px; line-height: 2.1; }
+html[lang="fa"] .directory-foot { font-size: 11px; }
+/* Paragraphs are deliberately different from display titles and compact controls. */
+html[lang="fa"] :is(.prose p,.company-content p,.catalog-body p,.catalog-feature-grid p,.engineering-followup p,.card-body p) { font-family: var(--fa-reading); font-size: 15px; line-height: 2.2; }
+html[lang="fa"] :is(.contact-aside p,.catalog-section-label>p,.catalog-next p,.catalog-faqs details>div p) { font-family: var(--fa-reading); font-size: 14px; line-height: 2.2; }
+html[lang="fa"] .company-identity h2 { font-size: 24px; }
+html[lang="fa"] .company-identity p { font-family: "Inter",sans-serif; font-size: 12px; }
+html[lang="fa"] .leadership>span { font-family: var(--fa-interface); font-size: 13px; }
+html[lang="fa"] .leadership strong { font-family: var(--fa-display); font-size: 21px; }
+html[lang="fa"] :is(.filters,.filters label,.form-field label,.tags span,.tag) { font-size: 13px; }
+html[lang="fa"] :is(input,select,textarea) { font-size: 15px; }
+html[lang="fa"] .contact-form .muted { font-family: var(--fa-interface); font-size: 12px; line-height: 2; }
+html[lang="fa"] :is(.card-body .eyebrow,.catalog-title .eyebrow,.catalog-section-label .eyebrow,.catalog-next .eyebrow) { font-family: var(--fa-interface); font-size: 11px; }
+html[lang="fa"] .catalog-nav { font-size: 13px; }
+html[lang="fa"] .catalog-breadcrumb,html[lang="fa"] .catalog-status { font-size: 12px; }
+html[lang="fa"] .catalog-title h1 { line-height: 1.4; }
+html[lang="fa"] .catalog-title .lead { line-height: 2.2; }
+html[lang="fa"] :is(.catalog-facts dt,.catalog-facts-heading .eyebrow,.catalog-facts-foot) { font-family: var(--fa-interface); font-size: 12px; }
+html[lang="fa"] .catalog-facts dd { font-family: var(--fa-reading); font-size: 17px; line-height: 2; }
+html[lang="fa"] .catalog-faqs summary { font-family: var(--fa-display); font-size: 15px; font-weight: 700; line-height: 2; }
+html[lang="fa"] .catalog-specifications dt { font-family: var(--fa-interface); font-size: 14px; }
+html[lang="fa"] .catalog-specifications dd { font-family: var(--fa-reading); font-size: 14px; line-height: 2.1; }
+html[lang="fa"] .engineering-table thead th { font-family: var(--fa-interface); font-size: 14px; }
+html[lang="fa"] .engineering-table tbody th { font-family: var(--fa-display); font-size: 17px; font-weight: 700; line-height: 1.9; }
+html[lang="fa"] .engineering-table td { font-family: var(--fa-reading); font-size: 14px; line-height: 2.2; }
+html[lang="fa"] .engineering-table td:last-child { font-family: var(--fa-interface); font-size: 14px; line-height: 2.2; }
+html[lang="fa"] .engineering-table .index { font-family: "Inter",sans-serif; font-size: 10px; }
+html[lang="fa"] .footer-grid { font-size: 13px; }
+html[lang="fa"] .footer-grid p { font-family: var(--fa-reading); font-size: 12px; line-height: 2; }
+html[lang="fa"] .footer-bottom { font-size: 12px; }
+@media(max-width:1100px) {
+  html[lang="fa"] .nav nav { font-size: 13px; }
+  html[lang="fa"] .brand { font-size: 16px; }
+}
+@media(max-width:700px) {
+  html[lang="fa"] .brand { font-size: 15px; }
+  html[lang="fa"] .brand small { font-size: 10px; }
+  html[lang="fa"] .home-intro h1 { font-size: clamp(34px,9vw,44px); line-height: 1.7; }
+  html[lang="fa"] .page-heading h1 { font-size: 34px; }
+  html[lang="fa"] .lead,html[lang="fa"] .home-intro .lead { font-size: 15px; }
+  html[lang="fa"] .nav-actions .button { font-size: 12px; }
+  html[lang="fa"] .engineering-table tbody th { font-size: 19px; }
+  html[lang="fa"] .engineering-table td::before { font-family: var(--fa-interface); font-size: 12px; }
+  html[lang="fa"] .footer-bottom { font-size: 11px; }
+}
+@media print {
+  html[lang="fa"] .catalog-body p,html[lang="fa"] .catalog-feature-grid p { font-size: 10pt; }
+}
+
+/* Nastaliq for Persian display and editorial titles; Vazirmatn for reading and UI. */
+html[lang="fa"] {
+  --fa-display: "Noto Nastaliq Urdu", "Vazirmatn", "Inter", sans-serif;
+}
+html[lang="fa"] :is(h1,h2,h3) { font-weight:600; line-height:2.35; overflow:visible; }
+html[lang="fa"] .brand { font-family:var(--fa-interface); }
+html[lang="fa"] .home-intro h1 { font-size:clamp(34px,3.8vw,49px);line-height:2.2;padding-block:.1em .3em;margin-bottom:14px; }
+html[lang="fa"] .home-intro h1 em { font-family:var(--fa-display);font-size:1em;font-weight:600; }
+html[lang="fa"] .home-intro .lead { margin-top:12px; }
+html[lang="fa"] .page-heading h1 { font-size:clamp(30px,3.6vw,46px);line-height:2.4;padding-block:.08em .2em;margin-bottom:15px; }
+html[lang="fa"] .directory-item { padding-block:17px 23px; }
+html[lang="fa"] .directory-item h2 { font-size:24px;line-height:2.3;margin-bottom:9px; }
+html[lang="fa"] :is(.card h3,.catalog-feature-grid h3) { font-size:23px;line-height:2.3; }
+html[lang="fa"] :is(.catalog-section-label h2,.catalog-section-heading h2,.catalog-next h2,.company-content h2,.company-identity h2) { font-size:30px;line-height:2.35; }
+html[lang="fa"] .engineering-table tbody th { font-size:21px;line-height:2.4;padding-block:22px; }
+html[lang="fa"] .catalog-faqs summary { font-size:20px;line-height:2.5; }
+html[lang="fa"] .leadership strong { font-size:25px;line-height:2.5; }
+@media(max-width:700px) {
+  html[lang="fa"] .home-intro h1 { font-size:clamp(30px,8vw,38px);line-height:2.3; }
+  html[lang="fa"] .page-heading h1 { font-size:32px;line-height:2.5; }
+  html[lang="fa"] .directory-item h2 { font-size:23px; }
+  html[lang="fa"] .engineering-table tbody th { font-size:22px; }
+}

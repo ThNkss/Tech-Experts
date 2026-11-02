@@ -1,0 +1,78 @@
+{% load static i18n site_copy %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% block description %}{% phrase 'Dynamic Tech Experts — software products, custom applications, and industrial software engineering in Shiraz.' 'استادان فناوری پویا؛ محصولات نرم‌افزاری، توسعه برنامه‌های اختصاصی و مهندسی نرم‌افزار صنعتی در شیراز.' %}{% endblock %}">
+  <title>{% block title %}{% phrase 'Software engineering' 'مهندسی نرم‌افزار' %}{% endblock %} | Dynamic Tech Experts</title>
+  <script src="{% static 'js/theme.js' %}?v=icon2"></script>
+  <link rel="stylesheet" href="{% static 'fonts/site-fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}?v=blue-teal-glass8">
+  {% if LANGUAGE_CODE == 'fa' %}
+  <link rel="stylesheet" href="{% static 'fonts/persian-fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/nastaliq-fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/persian-type.css' %}?v=nastaliq-2">
+  {% endif %}
+  <link rel="stylesheet" href="{% static 'css/interactions.css' %}?v=20261101-retina15">
+  <script src="{% static 'js/site.js' %}?v=compact7" defer></script>
+  <script src="{% static 'js/interactions.js' %}?v=20261101-retina15" defer></script>
+  <script src="{% static 'js/ambient.js' %}?v=20261101-retina15" defer></script>
+</head>
+<body class="page-{% if request.resolver_match.url_name == 'home' %}home{% elif request.resolver_match.url_name == 'company' %}company{% else %}content{% endif %}">
+<div class="ambient-field" aria-hidden="true"><canvas id="ambient-canvas"></canvas><div class="ambient-wash"></div></div>
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<a class="skip" href="#main">{% ui 'رفتن به محتوا' %}</a>
+<header class="header">
+  <div class="container nav">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="{% phrase 'Open menu' 'باز کردن منو' %}" hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <a class="brand" href="{% url 'home' %}" aria-label="{% ui 'استادان فناوری پویا' %}">
+      <span class="brand-logo" aria-hidden="true"><img src="{% static 'brand/ostadan-fanavari.png' %}" alt="" width="1024" height="1024"></span>
+      <span>{% ui 'استادان فناوری پویا' %}<small>{% phrase 'SOFTWARE ENGINEERING' 'مهندسی نرم‌افزار' %}</small></span>
+    </a>
+    <nav id="primary-nav" aria-label="{% ui 'منوی اصلی' %}">
+      <a href="{% url 'product_list' %}" {% if '/products/' in request.path %}aria-current="page"{% endif %}>{% ui 'محصولات' %}</a>
+      <a href="{% url 'project_list' %}" {% if '/projects/' in request.path %}aria-current="page"{% endif %}>{% ui 'پروژه‌ها' %}</a>
+      <a href="{% url 'engineering' %}" {% if request.resolver_match.url_name == 'engineering' %}aria-current="page"{% endif %}>{% phrase 'Engineering' 'روش همکاری' %}</a>
+      <a href="{% url 'company' %}" {% if request.resolver_match.url_name == 'company' %}aria-current="page"{% endif %}>{% ui 'درباره ما' %}</a>
+      <a class="mobile-contact" href="{% url 'contact' %}">{% phrase 'Discuss a project' 'گفت‌وگو درباره پروژه' %}</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" type="button" hidden aria-pressed="false"
+        data-dark-label="{% phrase 'Switch to dark mode' 'تغییر به حالت تیره' %}"
+        data-light-label="{% phrase 'Switch to light mode' 'تغییر به حالت روشن' %}"
+        data-dark-text="{% phrase 'Dark' 'تیره' %}" data-light-text="{% phrase 'Light' 'روشن' %}">
+        <span class="theme-icon" aria-hidden="true"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></span>
+      </button>
+      <form class="language-switch" action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <button type="submit" name="language" value="{% if LANGUAGE_CODE == 'fa' %}en{% else %}fa{% endif %}" lang="{% if LANGUAGE_CODE == 'fa' %}en{% else %}fa{% endif %}" aria-label="{% if LANGUAGE_CODE == 'fa' %}Switch to English{% else %}تغییر زبان به فارسی{% endif %}">{% if LANGUAGE_CODE == 'fa' %}EN{% else %}فارسی{% endif %}</button>
+      </form>
+      <a class="button small" href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}aria-current="page"{% endif %}>{% phrase 'Discuss a project' 'گفت‌وگو درباره پروژه' %} <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+<dialog class="mobile-menu-drawer" aria-label="{% phrase 'Navigation menu' 'منوی وب‌سایت' %}">
+  <div class="drawer-heading"><span>{% ui 'استادان فناوری پویا' %}</span><button type="button" data-menu-close aria-label="{% phrase 'Close menu' 'بستن منو' %}">×</button></div>
+  <div class="drawer-content"></div>
+</dialog>
+<main id="main">
+  {% if messages %}<div class="container" role="status">{% for message in messages %}<p class="notice">{{ message|ui }}</p>{% endfor %}</div>{% endif %}
+  {% block content %}{% endblock %}
+</main>
+<footer>
+  <div class="container footer-grid">
+    <div><a class="brand footer-brand" href="{% url 'home' %}"><span class="brand-logo" aria-hidden="true"><img src="{% static 'brand/ostadan-fanavari.png' %}" alt="" width="1024" height="1024"></span><span>{% ui 'استادان فناوری پویا' %}</span></a><p>{% phrase 'Software products. Applications. Industrial systems.' 'محصولات نرم‌افزاری. برنامه‌های اختصاصی. سیستم‌های صنعتی.' %}</p></div>
+    <nav aria-label="{% phrase 'Explore' 'بخش‌های وب‌سایت' %}"><a href="{% url 'product_list' %}">{% ui 'محصولات' %}</a><a href="{% url 'project_list' %}">{% ui 'پروژه‌ها' %}</a><a href="{% url 'engineering' %}">{% phrase 'How we work' 'روش همکاری' %}</a><a href="{% url 'company' %}">{% ui 'درباره ما' %}</a></nav>
+    <div><span>{% phrase 'Shiraz, Fars, Iran' 'شیراز، فارس، ایران' %}</span>{% if company.phone %}<a dir="ltr" href="tel:{{ company.phone|cut:' ' }}">{{ company.phone }}</a>{% endif %}{% if company.email %}<a dir="ltr" href="mailto:{{ company.email }}">{{ company.email }}</a>{% endif %}<a href="{% url 'contact' %}">{% ui 'تماس با ما' %} ↗</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© {% now 'Y' %} Dynamic Tech Experts</span></div>
+</footer>
+<button class="back-top" type="button" hidden aria-label="{% phrase 'Back to top' 'بازگشت به ابتدای صفحه' %}">↑</button>
+<dialog class="image-viewer" aria-label="{% phrase 'Image gallery' 'نمایش تصاویر' %}">
+  <div class="viewer-toolbar"><span class="viewer-count"></span><button type="button" data-viewer-close aria-label="{% phrase 'Close image' 'بستن تصویر' %}">×</button></div>
+  <img alt=""><p class="viewer-caption"></p>
+  <div class="viewer-controls"><button type="button" data-viewer-prev>{% phrase 'Previous' 'قبلی' %}</button><button type="button" data-viewer-next>{% phrase 'Next' 'بعدی' %}</button></div>
+</dialog>
+</body></html>

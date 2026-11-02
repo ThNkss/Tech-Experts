@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% load site_copy %}
+{% block title %}{{ copy.headline }}{% endblock %}
+{% block content %}
+<div class="container engineering-page">
+  <section class="page-heading" data-reveal>
+    <p class="eyebrow">{{ copy.eyebrow }}</p>
+    <h1>{{ copy.headline }}</h1>
+    <p class="lead engineering-intro">{{ copy.intro }}</p>
+  </section>
+  <section class="section compact" aria-label="{{ copy.headline }}">
+    <table class="engineering-table">
+      <caption class="visually-hidden">{{ copy.headline }}</caption>
+      <thead><tr>{% for column in copy.columns %}<th scope="col">{{ column }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for step in copy.steps %}
+        <tr>
+          <th scope="row"><span class="index">{{ forloop.counter|stringformat:'02d' }}</span><span>{{ step.name }}</span></th>
+          <td data-label="{{ copy.columns.1 }}">{{ step.work }}</td>
+          <td data-label="{{ copy.columns.2 }}"><span class="engineering-output">{{ step.output }}</span></td>
+        </tr>
+      {% endfor %}</tbody>
+    </table>
+    <div class="engineering-followup">
+      <div><h2>{{ copy.cycle_title }}</h2><p>{{ copy.cycle_body }}</p></div>
+      <a class="button" href="{% url 'contact' %}">{{ copy.cta }} ↗</a>
+    </div>
+  </section>
+</div>
+{% endblock %}

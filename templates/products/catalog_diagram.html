@@ -1,0 +1,60 @@
+{% load site_copy %}
+{% if diagram == 'hierarchy' %}
+<figure class="catalog-diagram hierarchy-diagram">
+  <figcaption>{% phrase 'The information model' 'مدل اطلاعاتی افق' %}</figcaption>
+  <ol class="hierarchy-chain">
+    <li><b>Enterprise</b><span>{% phrase 'Organisation' 'سازمان' %}</span></li>
+    <li><b>Site</b><span>{% phrase 'Facility or site' 'سایت یا مجموعه' %}</span></li>
+    <li><b>Area</b><span>{% phrase 'Operating area' 'ناحیه' %}</span></li>
+    <li><b>WorkUnit</b><span>{% phrase 'Work unit' 'واحد کاری' %}</span></li>
+    <li><b>Unit</b><span>{% phrase 'Process unit' 'واحد فرایندی' %}</span></li>
+    <li><b>Equipment</b><span>{% phrase 'Equipment record' 'پرونده تجهیز' %}</span></li>
+    <li><b>Tag</b><span>{% phrase 'Measurement, status or command' 'اندازه‌گیری، وضعیت یا فرمان' %}</span></li>
+  </ol>
+  <div class="diagram-branches"><span>Alarm / AlarmEvent</span><span>TagHistory</span><span>TagCommand / Setpoint</span></div>
+  <div class="catalog-example"><strong>{% phrase 'Abadeh · illustrative configuration' 'آباده · نمونه آموزشی پیکربندی' %}</strong>
+  <p>{% phrase 'Operating organisation → Abadeh wastewater site → Pumping area → Pumping work unit → Pump group → Example pump → Run feedback / flow / command' 'سازمان بهره‌بردار ← سایت تصفیه‌خانه آباده ← ناحیه پمپاژ ← واحد کاری پمپاژ ← واحد گروه پمپ‌ها ← پمپ نمونه ← بازخورد کارکرد / دبی / فرمان' %}</p>
+  <small>{% phrase 'Example labels, not a disclosure of project equipment IDs or site configuration.' 'نام‌ها برای توضیح مدل هستند؛ کد واقعی تجهیزات یا پیکربندی میدانی پروژه منتشر نشده است.' %}</small></div>
+</figure>
+{% elif diagram == 'alarms' %}
+<figure class="catalog-diagram alarm-diagram"><figcaption>{% phrase 'Implemented alarm transitions' 'مسیرهای پیاده‌شده رخداد آلارم' %}</figcaption>
+  <ol class="state-flow">
+    <li><small>01 · Normal</small><strong>{% phrase 'Normal condition' 'شرایط عادی' %}</strong><span>{% phrase 'Alarm condition becomes true ↓' 'برقراری شرط هشدار ↓' %}</span></li>
+    <li class="state-alert"><small>02 · Active-Unack</small><strong>{% phrase 'Active · unacknowledged' 'فعال · تأییدنشده' %}</strong><span>{% phrase 'Operator acknowledgement ↓' 'تأیید بهره‌بردار ↓' %}</span></li>
+    <li class="state-ack"><small>03 · Active-Ack</small><strong>{% phrase 'Active · acknowledged' 'فعال · تأییدشده' %}</strong><span>{% phrase 'Process returns to normal ↓' 'عادی‌شدن شرط فرایندی ↓' %}</span></li>
+    <li><small>04 · Return</small><strong>{% phrase 'Inactive · acknowledged' 'غیرفعال · تأییدشده' %}</strong><span>{% phrase 'Return event remains in history' 'رویداد بازگشت در تاریخچه می‌ماند' %}</span></li>
+  </ol>
+  <div class="catalog-example"><strong>{% phrase 'Return can precede acknowledgement' 'بازگشت می‌تواند پیش از تأیید رخ دهد' %}</strong><p>{% phrase 'Active-Unack → process clears → Return event; the current state label becomes Normal while acknowledgement remains false.' 'فعالِ تأییدنشده ← رفع شرط ← ثبت رویداد بازگشت؛ تا وقتی پرچم تأیید خاموش است، عنوان وضعیت فعلی «عادی» خواهد بود.' %}</p></div>
+  <div class="diagram-pair"><div><b>Shelve / Unshelve</b><span>{% phrase 'Temporary shelving and restoration' 'تعلیق موقت و بازگرداندن نمایش' %}</span></div><div><b>Suppress / Unsuppress</b><span>{% phrase 'Separate suppression state and events' 'مسکوت‌سازی با وضعیت و رویداد مستقل' %}</span></div></div>
+  <p class="diagram-note">{% phrase 'Acknowledgement, process condition, and visibility are separate. This diagram describes Horizon’s current implementation.' 'تأیید، شرط فرایندی و نحوه نمایش مستقل‌اند. این نمودار، رفتار نسخه بررسی‌شده افق را توضیح می‌دهد.' %}</p>
+</figure>
+{% elif diagram == 'access' %}
+<figure class="catalog-diagram"><figcaption>{% phrase 'Access evaluation for ordinary users' 'ارزیابی دسترسی کاربران عادی' %}</figcaption>
+  <ol class="decision-flow">
+    <li><b>UserPermissionOverride</b><strong>{% phrase 'Explicit exceptions' 'قواعد اختصاصی کاربر' %}</strong><span>{% phrase 'Applicable global deny blocks the action; grants and scoped exclusions shape access.' 'منع سراسری معتبر، عملیات را می‌بندد؛ اعطا و منع محدود، دامنه دسترسی را تغییر می‌دهند.' %}</span></li>
+    <li><b>PersonnelClass → RolePermission</b><strong>{% phrase 'What may the user do?' 'کاربر چه کاری می‌تواند انجام دهد؟' %}</strong><span>{% phrase 'View, acknowledge, command, configure, export…' 'مشاهده، تأیید، فرمان، پیکربندی، خروجی و…' %}</span></li>
+    <li><b>ScopeAssignment</b><strong>{% phrase 'Where may the user work?' 'اختیار در کدام محدوده معتبر است؟' %}</strong><span>{% phrase 'Enterprise → site → area → work unit → unit → equipment' 'سازمان، سایت، ناحیه، واحد کاری، واحد یا تجهیز و زیرمجموعه آن' %}</span></li>
+    <li><b>{% phrase 'Effective access' 'دسترسی مؤثر' %}</b><strong>{% phrase 'Check the requested resource' 'بررسی منبع و عملیات درخواستی' %}</strong><span>{% phrase 'Validity, IP and role time restrictions apply. Scoped denies exclude matching resources.' 'اعتبار، IP و ساعات مجاز نقش بررسی می‌شوند؛ منابع مشمول منع محدود از نتیجه کنار می‌روند.' %}</span></li>
+  </ol>
+  <p class="diagram-note">{% phrase 'A scoped grant may work without role permission. Superuser follows a separate administrative bypass.' 'اعطای محدود می‌تواند بدون مجوز نقش نیز معتبر باشد. حساب مدیرکل، مسیر مدیریتی جداگانه دارد.' %}</p>
+</figure>
+{% elif diagram == 'integration' %}
+<figure class="catalog-diagram integration-diagram"><figcaption>{% phrase 'Independent site connections · shared operating context' 'ارتباط مستقل سایت‌ها · محیط بهره‌برداری مشترک' %}</figcaption>
+  <div class="diagram-pair"><div><strong>{% phrase 'Site A' 'سایت اول' %}</strong><span>{% phrase 'Field equipment → OPC UA → site agent' 'تجهیزات میدانی ← OPC UA ← عامل سایت' %}</span><small>{% phrase 'Site identity · local buffer' 'هویت سایت · بافر محلی' %}</small></div><div><strong>{% phrase 'Site B' 'سایت دوم' %}</strong><span>{% phrase 'Field equipment → OPC UA → site agent' 'تجهیزات میدانی ← OPC UA ← عامل سایت' %}</span><small>{% phrase 'Site identity · local buffer' 'هویت سایت · بافر محلی' %}</small></div></div>
+  <div class="connection-label">↓ {% phrase 'Protected communication, configured for the installation' 'ارتباط محافظت‌شده مطابق پیکربندی پروژه' %} ↓</div>
+  <div class="integration-hub"><b>Horizon SCADA</b><span>{% phrase 'Hierarchy · HMI · alarms · history · command records' 'ساختار مجموعه · HMI · آلارم · تاریخچه · سوابق فرمان' %}</span></div>
+  <div class="connection-label">↓ {% phrase 'Action and resource-scope checks' 'بررسی مجوز عملیات و محدوده منابع' %} ↓</div>
+  <div class="diagram-branches"><span>{% phrase 'Site operator' 'بهره‌بردار سایت' %}</span><span>{% phrase 'Technical team' 'تیم فنی' %}</span><span>{% phrase 'Multi-site manager' 'مدیر چند مجموعه' %}</span></div>
+</figure>
+{% elif diagram == 'history' %}
+<figure class="catalog-diagram"><figcaption>{% phrase 'Choose the calculation that answers the question' 'تابع را متناسب با پرسش انتخاب کنید' %}</figcaption>
+<div class="hda-table-wrap"><table class="hda-table"><thead><tr><th>{% phrase 'Question' 'پرسش بهره‌برداری' %}</th><th>{% phrase 'Calculation' 'تابع یا ابزار' %}</th></tr></thead><tbody>
+<tr><td>{% phrase 'What changed around the event?' 'پیش و پس از رخداد چه تغییری داشتیم؟' %}</td><td>{% phrase 'Trend comparison · first/last · delta' 'مقایسه روند · ابتدا و انتها · اختلاف' %}</td></tr>
+<tr><td>{% phrase 'What was the range and variation?' 'دامنه و پراکندگی مقدار چقدر بود؟' %}</td><td>{% phrase 'Min/max · range · standard deviation · variance' 'کمینه و بیشینه · دامنه · انحراف معیار · واریانس' %}</td></tr>
+<tr><td>{% phrase 'What represents the typical values?' 'رفتار معمول مقادیر چگونه بود؟' %}</td><td>{% phrase 'Average · median · P10/P90' 'میانگین · میانه · صدک‌های ۱۰ و ۹۰' %}</td></tr>
+<tr><td>{% phrase 'When did the extremes occur?' 'کمینه و بیشینه چه زمانی رخ دادند؟' %}</td><td>{% phrase 'Actual min/max timestamps' 'زمان واقعی کمینه و بیشینه' %}</td></tr>
+<tr><td>{% phrase 'What was the average over covered time?' 'میانگین با توجه به مدت پوشش داده چقدر بود؟' %}</td><td>{% phrase 'Time-weighted average' 'میانگین زمانی' %}</td></tr>
+<tr><td>{% phrase 'What volume passed through?' 'چه حجمی عبور کرد؟' %}</td><td>{% phrase 'Flow integration with a compatible unit' 'انتگرال دبی با واحد سازگار' %}</td></tr>
+</tbody></table></div><p class="diagram-note">{% phrase 'Choose each tag’s period, interval and function. Missing coverage and unknown signal quality must remain visible in interpretation.' 'برای هر تگ، بازه، فاصله گزارش و تابع جدا انتخاب می‌شود. پوشش ناقص و کیفیت نامشخص باید در تفسیر نتیجه در نظر گرفته شوند.' %}</p>
+</figure>
+{% endif %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}{% load site_copy static %}
+{% block title %}{% ui 'درباره ما' %}{% endblock %}
+{% block content %}
+<div class="container">
+  <section class="page-heading" data-reveal><p class="eyebrow">{% phrase 'COMPANY / DYNAMIC TECH EXPERTS' 'شرکت / استادان فناوری پویا' %}</p><h1>{% phrase 'Dynamic Tech Experts.' 'استادان فناوری پویا' %}</h1><p class="lead">{% phrase 'Software engineering for business and industry' 'مهندسی نرم‌افزار برای کسب‌وکار و صنعت' %}</p></section>
+  <section class="company-layout section compact">
+    <aside class="company-identity" data-reveal><span class="company-mark" aria-hidden="true"><img src="{% static 'brand/ostadan-fanavari.png' %}" alt="" width="1024" height="1024"></span><h2>{% ui 'استادان فناوری پویا' %}</h2><p>{% phrase 'Software engineering' 'Dynamic Tech Experts' %}</p><span class="eyebrow">{% ui 'شیراز، ایران' %}</span><a class="text-link" href="{% url 'contact' %}">{% ui 'تماس با ما' %} ↗</a></aside>
+    <div class="company-content" data-reveal><h2>{% phrase 'Software shaped by the work it serves.' 'نرم‌افزار متناسب با کاری که برای آن ساخته می‌شود' %}</h2>{% if company|localized:"introduction" %}{{ company|localized:"introduction"|linebreaks }}{% endif %}
+    {% if company|localized:"capabilities" %}<h3>{% ui 'توانمندی‌های ما' %}</h3>{% with capabilities=company|localized:"capabilities" %}<ul class="capability-list">{% for line in capabilities.splitlines %}{% if line %}<li>{{ line }}</li>{% endif %}{% endfor %}</ul>{% endwith %}{% endif %}
+    <a class="button secondary" href="{% url 'engineering' %}">{% phrase 'Explore our approach to engineering' 'آشنایی با رویکرد مهندسی ما' %} →</a></div>
+  </section>
+</div>
+{% endblock %}
